@@ -1,0 +1,19 @@
+<p class="fs-4 text-center">
+  In order to become an admin you must have enter the admin code
+</p>
+<form method="POST">
+  <div class="mb-3">
+    <label for="secret" class="form-label">Introduce the code below:</label>
+    <input
+      type="text"
+      class="form-control"
+      aria-describedby="secretHelp"
+      name="secret"
+    />
+    <div id="secretHelp" class="form-text">What could be?</div>
+  </div>
+
+  <button type="submit" class="btn bg-success bg-opacity-50">
+    Become admin
+  </button>
+</form>

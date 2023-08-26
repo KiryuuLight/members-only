@@ -1,0 +1,28 @@
+<p class="text-center">Messages from the users:</p>
+
+<% if(typeof userMessages !== 'undefined') { %>
+<div class="d-flex gap-5 justify-content-center">
+  <% userMessages.forEach((message) => { %>
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <p class="card-text text-warning">
+        <% if (typeof user !== 'undefined' && (user.memberStatus || user.admin)
+        ){ %> On <%= message.dataFormat %> <% } %>
+      </p>
+      <h5 class="card-title"><%= message.title %></h5>
+      <p class="card-text"><%= message.bodyMessage %></p>
+      <p class="text-end">
+        <% if (typeof user !== 'undefined' && user.memberStatus){ %> -<%=
+        message.user.nickname %> <% } else { %> -Anonymous <% } %>
+      </p>
+    </div>
+    <% if (typeof user !== 'undefined' && user.admin) { %>
+    <form action="/delete-message" method="POST">
+      <input type="hidden" name="id" value="<%= message._id %>" />
+      <button class="btn btn-danger" type="submit">Delete</button>
+    </form>
+    <% } %>
+  </div>
+  <% }) %>
+</div>
+<% }%>

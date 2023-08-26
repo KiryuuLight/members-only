@@ -1,0 +1,36 @@
+<p class="fs-4 text-center">Register for gain access to the ClubHouse!</p>
+<form method="POST">
+  <div class="d-flex gap-5">
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" name="firstName" />
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" name="lastName" />
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      aria-describedby="emailHelp"
+      name="email"
+    />
+    <div id="emailHelp" class="form-text">
+      We'll never share your email with anyone else.
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" />
+  </div>
+  <div class="mb-3">
+    <label for="confirmPassword" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" name="confirmPassword" />
+  </div>
+  <button type="submit" class="btn bg-success bg-opacity-50">
+    Create Account
+  </button>
+</form>
